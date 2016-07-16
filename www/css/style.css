@@ -39,6 +39,12 @@ h2 {
   margin: 10px;
 }
 
+.card input {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 17px;
+}
+
 .search-btn {
   width: 120px;
   margin-top: 10px;

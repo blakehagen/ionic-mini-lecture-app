@@ -5,16 +5,16 @@
   </section>
 
   <div class="card">
-    <input type="text" placeholder="Search Movies" ng-model="movie">
+    <input type="text" placeholder="Search Movies" ng-model="home.movie">
   </div>
   <div class="card">
-    <input type="text" placeholder="Search TV Shows">
+    <input type="text" placeholder="Search TV Shows" ng-model="home.tvShow">
   </div>
   <div class="card">
-    <input type="text" placeholder="Search Person">
+    <input type="text" placeholder="Search Person" ng-model="home.person">
   </div>
 
-  <button class="button button-positive search-btn">
+  <button class="button button-positive search-btn" ng-click="home.submitSearch()">
     Search
   </button>
 
