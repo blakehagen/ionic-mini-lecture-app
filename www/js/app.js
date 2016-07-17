@@ -17,8 +17,10 @@ angular.module('ionicMiniApp', ['ionic'])
 
     $urlRouterProvider
       .otherwise('/');
+  })
 
-
+  .config(function($ionicConfigProvider) {
+    $ionicConfigProvider.scrolling.jsScrolling(false)
   })
 
 

@@ -7,4 +7,5 @@ plugins/
 .idea
 .DS_Store
 ionic.project
-
+.io-config.json
+resources

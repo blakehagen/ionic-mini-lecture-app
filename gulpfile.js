@@ -6,12 +6,25 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var plumber = require('gulp-plumber');
+var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
   sass: ['./scss/**/*.scss']
 };
 
 gulp.task('default', ['sass']);
+
+gulp.task('optimize-css', function () {
+  return gulp.src('./www/css/style.css')
+    .pipe(plumber())
+    // .pipe(concat('app.css'))
+    // .pipe(minifyCss())
+    .pipe(autoprefixer({browsers: ['last 23 iOS versions', 'last 23 Safari versions', 'last 23 IE versions', 'last 23 Chrome versions', 'last 23 Firefox versions']}))
+    .pipe(gulp.dest('./www/css/'));
+});
+
+
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')

@@ -4,14 +4,16 @@
     <h2>Ionic Movie App</h2>
   </section>
 
-  <div class="card" ng-show="home.searchCategory === 'movie'">
-    <input type="text" placeholder="Search Movies" ng-model="home.movie">
-  </div>
-  <div class="card" ng-show="home.searchCategory === 'tv'">
-    <input type="text" placeholder="Search TV Shows" ng-model="home.tvShow">
-  </div>
-  <div class="card" ng-show="home.searchCategory === 'person'">
-    <input type="text" placeholder="Search Actors" ng-model="home.person">
+  <div class="list">
+  <label class="item item-input" ng-show="home.searchCategory === 'movie'">
+      <input type="text" placeholder="Search Movies" ng-model="home.movie">
+    </label>
+    <label class="item item-input" ng-show="home.searchCategory === 'tv'">
+      <input type="text" placeholder="Search TV Shows" ng-model="home.tvShow">
+    </label>
+    <label class="item item-input" ng-show="home.searchCategory === 'person'">
+      <input type="text" placeholder="Search Actors" ng-model="home.person">
+    </label>
   </div>
 
   <div class="sml-btn-container">

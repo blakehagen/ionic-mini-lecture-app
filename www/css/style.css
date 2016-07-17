@@ -1,4 +1,6 @@
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -25,9 +27,22 @@ p, h2 {
 .page-wrap {
   height: 100%;
   width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   background: url("http://bossfight.co/wp-content/uploads/2016/02/boss-fight-free-high-quality-stock-images-photos-photography-mountain-sky-night-stars.jpg") center center no-repeat;
   background-size: cover;
@@ -42,10 +57,25 @@ h2 {
 }
 
 .sml-btn-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   flex-direction: row;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
   flex-flow: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -53,7 +83,7 @@ h2 {
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  margin: 0 10px;
+  margin: -40px 10px 0 10px;
 }
 
 .active {
@@ -64,14 +94,7 @@ h2 {
   color: #FFF;
 }
 
-.card {
-  width: 80%;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 10px;
-}
-
-.card input {
+.item-input input {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 17px;
@@ -85,44 +108,62 @@ h2 {
 
 .new-search-btn {
   width: 90%;
-  margin-bottom: 14px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .data-card-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   width: 100%;
   overflow: auto;
 }
 
-.data-card {
-  background: #FFF;
-  width: 90%;
-  margin: 14px;
-  border-radius: 5px;
-  border: 1px solid #0C60EE;
-}
-
 .card-title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 22px !important;
+  font-weight: 700;
   margin: 10px;
   padding: 0;
   cursor: default;
-
 }
 
 .card-text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 100;
   margin: 10px;
   padding: 0;
   cursor: default;
+}
 
+.list {
+  width: 90%;
+  /*margin-top: 10px;*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+.item {
+  margin: 20px 0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 
