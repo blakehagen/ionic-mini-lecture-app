@@ -2,18 +2,34 @@ angular.module('ionicMiniApp').controller('homeCtrl', function (mainService) {
 
   var home = this;
 
-  home.submitSearch = function () {
-    console.log('home.movie', home.movie);
-    console.log('home.tvShow', home.tvShow);
-    console.log('home.person', home.person);
+  home.searchCategory = 'movie';
+  home.movie = null;
+  home.tvShow = null;
+  home.person = null;
 
-    mainService.getData().then(function (response) {
+  home.setSearchCat = function (category) {
+    home.searchCategory = category;
+  };
+
+  home.submitSearch = function () {
+    var query;
+    if (home.searchCategory === 'movie') {
+      query = home.movie;
+    } else if (home.searchCategory === 'tv') {
+      query = home.tvShow;
+    } else {
+      query = home.person
+    }
+
+    home.movie = '';
+    home.tvShow = '';
+    home.person = '';
+
+    mainService.getData(encodeURI(query), home.searchCategory).then(function (response) {
       console.log('response', response);
     })
 
   }
-
-
 
 
 });

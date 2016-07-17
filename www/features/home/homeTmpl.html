@@ -4,17 +4,26 @@
     <h2>Ionic Movie App</h2>
   </section>
 
-  <div class="card">
+  <div class="card" ng-show="home.searchCategory === 'movie'">
     <input type="text" placeholder="Search Movies" ng-model="home.movie">
   </div>
-  <div class="card">
+  <div class="card" ng-show="home.searchCategory === 'tv'">
     <input type="text" placeholder="Search TV Shows" ng-model="home.tvShow">
   </div>
-  <div class="card">
-    <input type="text" placeholder="Search Person" ng-model="home.person">
+  <div class="card" ng-show="home.searchCategory === 'person'">
+    <input type="text" placeholder="Search Actors" ng-model="home.person">
   </div>
 
-  <button class="button button-positive search-btn" ng-click="home.submitSearch()">
+  <div class="sml-btn-container">
+    <p class="search-term" ng-class="home.searchCategory === 'movie' ? 'active' : 'inactive'"
+       ng-click="home.setSearchCat('movie')">Movie</p>
+    <p class="search-term" ng-class="home.searchCategory === 'tv' ? 'active' : 'inactive'"
+       ng-click="home.setSearchCat('tv')">TV Show</p>
+    <p class="search-term" ng-class="home.searchCategory === 'person' ? 'active' : 'inactive'"
+       ng-click="home.setSearchCat('person')">Actor</p>
+  </div>
+
+  <button class="button button-positive search-btn" ng-click="home.submitSearch()" ng-if="home.searchCategory">
     Search
   </button>
 

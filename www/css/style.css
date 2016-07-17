@@ -32,6 +32,29 @@ h2 {
   font-size: 30px;
 }
 
+.sml-btn-container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-term {
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0 10px;
+}
+
+.active {
+  color: #33CD5F;
+}
+
+.inactive {
+  color: #FFF;
+}
+
 .card {
   width: 80%;
   border-radius: 4px;
@@ -46,6 +69,7 @@ h2 {
 }
 
 .search-btn {
-  width: 120px;
-  margin-top: 10px;
+  width: 180px;
+  margin-top: 35px;
 }
+
