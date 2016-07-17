@@ -8,6 +8,13 @@ angular.module('ionicMiniApp', ['ionic'])
         controller: 'homeCtrl as home'
       });
 
+    $stateProvider
+      .state('results', {
+        url: '/results',
+        templateUrl: './features/results/resultsTmpl.html',
+        controller: 'resultsCtrl as results'
+      });
+
     $urlRouterProvider
       .otherwise('/');
 

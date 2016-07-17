@@ -1,0 +1,30 @@
+<div class="page-wrap">
+
+  <div ng-if="results.loading" class="data-card-container">
+    <ion-spinner icon="circles" class="light"></ion-spinner>
+  </div>
+
+  <div ng-if="!results.loading" class="data-card-container">
+
+    <div class="data-card">
+      <p class="card-title">Results for "{{ results.query }}"</p>
+    </div>
+    <button class="button button-positive new-search-btn" ng-click="results.newSearch()">
+      New Search
+    </button>
+
+    <div class="data-card" ng-repeat="result in results.tmdbData" ng-if="results.cat !== 'person'">
+      <p class="card-title">{{ result.title || result.original_name }} </p>
+      <p class="card-text">{{ result.release_date }}</p>
+      <p class="card-text">{{ result.overview }}</p>
+    </div>
+
+    <div class="data-card" ng-repeat="result in results.tmdbData" ng-if="results.cat === 'person'">
+      <p class="card-title">{{ result.name }} </p>
+      <p class="card-text" ng-repeat="movie in result.known_for" >{{ movie.title }}</p>
+    </div>
+
+
+  </div>
+
+</div>

@@ -14,6 +14,14 @@ body {
   margin: 0;
 }
 
+p, h2 {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .page-wrap {
   height: 100%;
   width: 100%;
@@ -30,6 +38,7 @@ h2 {
   color: #FFF;
   font-weight: 100;
   font-size: 30px;
+  cursor: default;
 }
 
 .sml-btn-container {
@@ -66,10 +75,54 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 17px;
+  width: 100%;
 }
 
 .search-btn {
   width: 180px;
   margin-top: 35px;
 }
+
+.new-search-btn {
+  width: 90%;
+  margin-bottom: 14px;
+}
+
+.data-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+}
+
+.data-card {
+  background: #FFF;
+  width: 90%;
+  margin: 14px;
+  border-radius: 5px;
+  border: 1px solid #0C60EE;
+}
+
+.card-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 10px;
+  padding: 0;
+  cursor: default;
+
+}
+
+.card-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  margin: 10px;
+  padding: 0;
+  cursor: default;
+
+}
+
 

@@ -1,4 +1,4 @@
-angular.module('ionicMiniApp').controller('homeCtrl', function (mainService) {
+angular.module('ionicMiniApp').controller('homeCtrl', function ($state, mainService) {
 
   var home = this;
 
@@ -12,6 +12,7 @@ angular.module('ionicMiniApp').controller('homeCtrl', function (mainService) {
   };
 
   home.submitSearch = function () {
+
     var query;
     if (home.searchCategory === 'movie') {
       query = home.movie;
@@ -21,14 +22,17 @@ angular.module('ionicMiniApp').controller('homeCtrl', function (mainService) {
       query = home.person
     }
 
+    if(!query){
+      throw 'Error - Form Not Valid';
+    }
+
     home.movie = '';
     home.tvShow = '';
     home.person = '';
 
-    mainService.getData(encodeURI(query), home.searchCategory).then(function (response) {
-      console.log('response', response);
-    })
+    mainService.setSearchObject(query, home.searchCategory);
 
+    $state.go('results');
   }
 
 
