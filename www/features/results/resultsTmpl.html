@@ -1,7 +1,7 @@
-<div class="page-wrap">
+<ion-content class="page-wrap">
 
-  <div class="data-card-container">
-    <ion-spinner ng-if="results.loading" icon="circles" class="spinner-positive"></ion-spinner>
+  <div class="data-card-container" ng-if="results.loading">
+    <ion-spinner  icon="circles" class="spinner-positive"></ion-spinner>
   </div>
 
   <div ng-if="!results.loading" class="data-card-container">
@@ -29,6 +29,4 @@
   </div>
 
 
-</div>
-
-</div>
+</ion-content>
